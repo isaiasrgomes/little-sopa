@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #140225;
+}
+
+body * {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 160%
+}
+
+header {
+    padding-top: 32px;
+    height: calc(120px + 32px);
+}
+
+header div {  
+    width:120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #6f04d9 0%, #d9048e 100%);
+
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+
+    transition: transform .3s;
+    animation: fromTop .7s
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+header img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: grid;
+    gap: 24px;
+}
+
+section {
+    color: white;
+
+    background-image: linear-gradient(90deg, #6f04d9 0%, #d9048e 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div {
+    background-color: #170d24;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #a1a1aa;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-top: 24px;
+}
+
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+.movie-list img {
+    width: 90px;
+    border-radius: 18px;
+    border: 1px solid #555555
+
+}
+
+.tv-list img {
+    border-radius: 18px;
+    width: 90px;
+    border: 1px solid #555555 ;
+}
+
+/* animation */
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+@keyframes fromTop {
+    from{
+        transform: translateY(-30px)
+    }
+
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        transform: translateY(30px)
+    }
+
+    to{
+        transform: translateY(0);
+    }
+}
