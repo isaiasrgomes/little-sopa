@@ -118,6 +118,11 @@ section ul li:hover {
     bottom:5px;
 }
 
+#back-top:hover {
+    scale: 1.1;
+    transition: 0.3s;
+}
+
 /* animation */
 main section {
     animation: fromBottom .7s backwards;
